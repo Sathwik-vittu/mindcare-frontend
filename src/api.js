@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://tici01680008.onrender.com/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://mindcare-backend-1diu.onrender.com';
 
 const api = axios.create({
   baseURL: API_URL,
