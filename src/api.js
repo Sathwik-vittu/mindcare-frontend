@@ -19,43 +19,43 @@ api.interceptors.request.use((config) => {
 
 // Auth APIs
 export const authAPI = {
-  login: (data) => api.post('/auth/login', data),
-  register: (data) => api.post('/auth/register', data),
-  getMe: () => api.get('/auth/me'),
+  login: (data) => api.post('/api/auth/login', data),
+  register: (data) => api.post('/api/auth/register', data),
+  getMe: () => api.get('/api/auth/me'),
 };
 
 // Profile APIs
 export const profileAPI = {
-  update: (data) => api.put('/profile', data),
+  update: (data) => api.put('/api/profile', data),
 };
 
 // Medication APIs
 export const medicationAPI = {
-  getAll: () => api.get('/medications'),
-  create: (data) => api.post('/medications', data),
-  update: (id, data) => api.put(`/medications/${id}`, data),
-  delete: (id) => api.delete(`/medications/${id}`),
+  getAll: () => api.get('/api/medications'),
+  create: (data) => api.post('/api/medications', data),
+  update: (id, data) => api.put(`/api/medications/${id}`, data),
+  delete: (id) => api.delete(`/api/medications/${id}`),
 };
 
 // Appointment APIs
 export const appointmentAPI = {
-  getAll: () => api.get('/appointments'),
-  create: (data) => api.post('/appointments', data),
-  update: (id, data) => api.put(`/appointments/${id}`, data),
-  delete: (id) => api.delete(`/appointments/${id}`),
+  getAll: () => api.get('/api/appointments'),
+  create: (data) => api.post('/api/appointments', data),
+  update: (id, data) => api.put(`/api/appointments/${id}`, data),
+  delete: (id) => api.delete(`/api/appointments/${id}`),
 };
 
 // Forum APIs
 export const forumAPI = {
-  getPosts: (category) => api.get(`/forum/posts${category ? `?category=${category}` : ''}`),
-  getPost: (id) => api.get(`/forum/posts/${id}`),
-  createPost: (data) => api.post('/forum/posts', data),
-  createReply: (postId, data) => api.post(`/forum/posts/${postId}/replies`, data),
+  getPosts: (category) => api.get(`/api/forum/posts${category ? `?category=${category}` : ''}`),
+  getPost: (id) => api.get(`/api/forum/posts/${id}`),
+  createPost: (data) => api.post('/api/forum/posts', data),
+  createReply: (postId, data) => api.post(`/api/forum/posts/${postId}/replies`, data),
 };
 
 // Dashboard APIs
 export const dashboardAPI = {
-  getStats: () => api.get('/dashboard/stats'),
+  getStats: () => api.get('/api/dashboard/stats'),
 };
 
 export default api;
