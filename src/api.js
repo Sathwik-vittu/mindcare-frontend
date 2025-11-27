@@ -29,7 +29,7 @@ export const profileAPI = {
   update: (data) => api.put('/api/profile', data),
 };
 
-// Medication APIs
+// Medication APIS
 export const medicationAPI = {
   getAll: () => api.get('/api/medications'),
   create: (data) => api.post('/api/medications', data),
